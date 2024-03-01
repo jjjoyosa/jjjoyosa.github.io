@@ -43,3 +43,25 @@ function reversePassword(password) {
   }
   return newpassword;
 }
+
+function storePassword(name1, pass1, pass2) {
+  var newpassword = "";
+
+  if (validatePassword(pass1, pass2) == true) {
+    newpass = reversePassword(pass1);
+
+    const details = {
+      name: name1,
+      newpassword: newpass,
+    };
+
+    return details;
+  } else {
+    const details = {
+      name: name1,
+      newpassword: pass1,
+    };
+
+    return details;
+  }
+}
