@@ -65,3 +65,6 @@ function storePassword(name1, pass1, pass2) {
     return details;
   }
 }
+
+console.log(storePassword("John", "Pass1234", "Pass1234")); // returns {name: "John", newpassword:"4321ssaP"}
+console.log(storePassword("John", "Pass123", "Pass12345")); // returns {name: "John", newpassword:"Pass123"}
