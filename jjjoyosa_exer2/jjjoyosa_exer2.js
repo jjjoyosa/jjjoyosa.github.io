@@ -34,3 +34,12 @@ function validatePassword(pass1, pass2) {
     } else return false;
   } else return false;
 }
+
+function reversePassword(password) {
+  var newpassword = "";
+
+  for (var i = password.length - 1; i >= 0; i--) {
+    newpassword += password[i];
+  }
+  return newpassword;
+}
