@@ -1,3 +1,7 @@
+// Jenzzo J. Joyosa
+// CMSC100 - UV3L
+// Exercise 3
+
 //function to validate password
 function validatePassword(pass1, pass2) {
   //checks if the passwords match
