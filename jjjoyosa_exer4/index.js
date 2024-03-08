@@ -56,5 +56,15 @@ export function addAccount(fname, lname, email, age) {
 
     const final =
       fname + ", " + lname + ", " + email + ", " + age + ", " + uniqueID;
+
+    fs.appendFile("users.txt", final + "\n", (err) => {
+      if (err) {
+        console.error(err);
+        return false;
+      } else {
+        console.log("User saved");
+        return true;
+      }
+    });
   }
 }
