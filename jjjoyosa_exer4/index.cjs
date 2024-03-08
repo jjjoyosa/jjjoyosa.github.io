@@ -15,7 +15,7 @@ function generateUniqueID(fname, lname) {
   return unique;
 }
 
-function addAccount(fname, lname, email, age) {
+function addAccount([fname, lname, email, age]) {
   if (
     fname === undefined &&
     lname === undefined &&
@@ -26,30 +26,25 @@ function addAccount(fname, lname, email, age) {
   } else {
     if (fname.length === 0) {
       console.log("Empty first name");
-      process.exit(1);
+      return 0;
     }
     if (lname.length === 0) {
       console.log("Empty last name");
-      process.exit(1);
+      return 0;
     }
 
     if (email.length === 0) {
       console.log("Empty email");
-      process.exit(1);
+      return 0;
     } else {
       if (validator.isEmail(email) == false) {
         console.log("Incorrect email format");
-        process.exit(1);
+        return 0;
       }
     }
-    if (age.length === 0) {
-      console.log("Empty age");
-      process.exit(1);
-    } else {
-      if (age < 18) {
-        console.log("Age should be at least 18");
-        process.exit(1);
-      }
+    if (age < 18) {
+      console.log("Age should be at least 18");
+      return 0;
     }
 
     var uniqueID = generateUniqueID(fname, lname);
@@ -62,7 +57,6 @@ function addAccount(fname, lname, email, age) {
         console.error(err);
         return false;
       } else {
-        console.log("User saved");
         return true;
       }
     });
