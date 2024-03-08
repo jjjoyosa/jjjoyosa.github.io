@@ -2,10 +2,10 @@ const { v4: uuidv4 } = require("uuid");
 const validator = require("validator");
 const fs = require("fs");
 
-export function generateUniqueID(fname, lname) {
+function generateUniqueID(fname, lname) {
   var unique = "";
 
-  var f = fname.charAt(0);
+  var f = fname.charAt(0).toLowerCase();
   var l = lname.toLowerCase();
 
   const alphanumeric = uuidv4().split("-").join("").substring(0, 8);
@@ -15,7 +15,7 @@ export function generateUniqueID(fname, lname) {
   return unique;
 }
 
-export function addAccount(fname, lname, email, age) {
+function addAccount(fname, lname, email, age) {
   if (
     fname === undefined &&
     lname === undefined &&
@@ -68,3 +68,4 @@ export function addAccount(fname, lname, email, age) {
     });
   }
 }
+module.exports = { generateUniqueID, addAccount };
