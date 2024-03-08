@@ -2,7 +2,7 @@ const { v4: uuidv4 } = require("uuid");
 const validator = require("validator");
 const fs = require("fs");
 
-function generateUniqueID(fname, lname) {
+export function generateUniqueID(fname, lname) {
   var unique = "";
 
   var f = fname.charAt(0);
@@ -15,7 +15,7 @@ function generateUniqueID(fname, lname) {
   return unique;
 }
 
-function addAccount(fname, lname, email, age) {
+export function addAccount(fname, lname, email, age) {
   if (
     fname === undefined &&
     lname === undefined &&
@@ -56,17 +56,5 @@ function addAccount(fname, lname, email, age) {
 
     const final =
       fname + ", " + lname + ", " + email + ", " + age + ", " + uniqueID;
-
-    console.log(final);
-
-    fs.appendFile("users.txt", final + "\n", (err) => {
-      if (err) {
-        console.error(err);
-        return false;
-      } else {
-        console.log("User saved");
-        return true;
-      }
-    });
   }
 }
