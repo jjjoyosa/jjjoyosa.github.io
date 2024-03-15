@@ -11,11 +11,6 @@ app.use(express.urlencoded({extended: false}));
 
 
 app.post('/add-book', (req, res) => {
-    const g = {
-
-        success: new(Boolean)
-
-    }
 
     const {book_name, isbn, author, year} = req.body;
 
@@ -25,11 +20,10 @@ app.post('/add-book', (req, res) => {
 
     appendFile('books.txt', bookData , err => {
         if(err) {
-            console.log(g);
+            res.json({success: false});
         } else {
-            g.success = true;
-            console.log(g);
-
+  
+            res.json({success: true});
         }
     });
 
