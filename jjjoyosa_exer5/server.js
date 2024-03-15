@@ -67,8 +67,29 @@ app.get('/find-by-isbn-author', (req, res) => {
 });
 
 app.get('/find-by-author', (req, res) => {
-    console.log(req.query);
-    res.send("hello" + req.query.isbn + req.query.author);
+        
+    const {author} = req.query;
+
+    if (!author ) {
+        return res.status(400).json({message: "Not all fields are complete"});
+     }
+
+    readFile('books.txt', 'utf8', (err, data) => {
+
+        if (err) {
+
+            return res.status(500).json({message: "Error"});
+        } 
+
+        const books = data.split("\n").map(line => line.split(","));
+
+        const match = books.filter(book => book[2] == author);
+
+        if (match.length === 0) return res.status(400).json({message:"No books match"});
+
+        res.status.json(match);
+
+    })
 });
 
 app.listen(3001, ()=> {
