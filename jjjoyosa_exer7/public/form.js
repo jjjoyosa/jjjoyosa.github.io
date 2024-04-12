@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function newCard(foodname, desc, imgurl){
 
         const card = document.createElement('div');
-        card.innerHTML = `<h2>${foodname}</h2> <p>${desc}</p> <img src='${imgurl}'>`;
+        card.className = "food-cards";
+        card.innerHTML = ` <br><img src='${imgurl}' width="500" height="500"> <br> <h2>${foodname}</h2> <p>${desc}</p> <button>Delete</button> <br><br>`;
         return card;
     };
 
