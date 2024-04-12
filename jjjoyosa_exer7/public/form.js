@@ -13,19 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const rank = document.getElementById("rank").value;
 
         console.log(foodname, desc, imgurl, rank);
-        const newcard = newCard(foodname, imgurl);
+        const newcard = newCard(foodname, desc, imgurl);
         cardOrder(newcard, rank);
         form.reset();        
 
     });
 
 
-    function newCard(foodname, imgurl){
+    function newCard(foodname, desc, imgurl){
 
         const card = document.createElement('div');
-        var img = document.createElement('img');
-        img.src = imgurl
-        card.innerHTML = foodname, document.body.appendChild(img);
+        card.innerHTML = `<h2>${foodname}</h2> <p>${desc}</p> <img src='${imgurl}'>`;
         return card;
     };
 
