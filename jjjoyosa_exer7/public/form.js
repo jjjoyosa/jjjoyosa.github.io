@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
 
-    
+
     function newCard(foodname, imgurl){
 
         const card = document.createElement('div');
         var img = document.createElement('img');
         img.src = imgurl
-        card.innerHTML = document.body.appendChild(img);
+        card.innerHTML = foodname, document.body.appendChild(img);
         return card;
     };
 
