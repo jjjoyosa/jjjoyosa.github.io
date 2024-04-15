@@ -13,28 +13,43 @@ document.addEventListener('DOMContentLoaded', function() {
         const rank = document.getElementById("rank").value;
 
         console.log(foodname, desc, imgurl, rank);
-        const newcard = newCard(foodname, desc, imgurl);
+        const newcard = newCard(foodname, desc, imgurl, rank);
         cardOrder(newcard, rank);
         form.reset();        
 
     });
 
 
-    function newCard(foodname, desc, imgurl){
+    function newCard(foodname, desc, imgurl, rank){
 
         const card = document.createElement('div');
         card.className = "food-cards";
-        card.innerHTML = ` <br><img src='${imgurl}' width="500" height="500"> <br> <h2>${foodname}</h2> <p>${desc}</p> <button id="delete">Delete</button> <br><br>`;
+        card.setAttribute('data-rank', rank);
+        card.innerHTML = ` <br><img src='${imgurl}' width="500" height="500"> <br> <h2>${foodname}</h2> <p>${desc}</p> <button class="delete">Delete</button> <br><br>`;
         return card;
     };
 
 
     function cardOrder(newcard, rank){
 
-        const existing = Array.from(foodcards.children);
-        
-        foodcards.insertBefore(newcard, existing[rank+1]);
+        const existingCards = Array.from(foodcards.children);
 
+        let insertIndex = existingCards.findIndex(card => {
+            const cardRank = parseInt(card.getAttribute('data-rank'));
+            return rank <= cardRank;
+        });
+
+        if (insertIndex === -1) {
+            insertIndex = existingCards.length;
+        }
+
+        foodcards.insertBefore(newcard, existingCards[insertIndex]);
+
+        foodcards.addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete')) {
+            event.target.parentNode.remove();
+        }
+    });
 
 
     }
