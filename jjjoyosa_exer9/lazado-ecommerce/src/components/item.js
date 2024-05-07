@@ -7,7 +7,7 @@ const ItemCard = ({ name, imageSrc, addToCart }) => {
       <img src={imageSrc} alt={name} className="item-image" />
       <div className="item-details">
         <h3>{name}</h3>
-        <button onClick={() => addToCart(name)}>Add to Cart</button>
+        <button onClick={addToCart}>Add to Cart</button>
       </div>
     </div>
   );

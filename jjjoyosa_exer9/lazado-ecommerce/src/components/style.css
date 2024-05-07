@@ -78,3 +78,62 @@
 .item-details button:hover {
   background-color: #0056b3;
 }
+/* style.css */
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-container {
+  flex: 1;
+  margin-right: 20px; /* Add some margin for spacing */
+}
+
+.shopping-cart {
+  flex: 0 0 300px; /* Fixed width for the shopping cart */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.shopping-cart h2 {
+  margin-top: 0;
+}
+
+.shopping-cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.shopping-cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.shopping-cart li:last-child {
+  border-bottom: none; /* Remove border from the last item */
+}
+
+.shopping-cart button {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.shopping-cart button:hover {
+  background-color: #ff3d3d;
+}
