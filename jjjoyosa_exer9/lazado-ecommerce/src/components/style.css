@@ -78,7 +78,6 @@
 .item-details button:hover {
   background-color: #0056b3;
 }
-/* style.css */
 
 .App {
   text-align: center;
@@ -92,16 +91,16 @@
 
 .item-container {
   flex: 1;
-  margin-right: 20px; /* Add some margin for spacing */
+  margin-right: 20px;
 }
 
 .shopping-cart {
-  flex: 0 0 300px; /* Fixed width for the shopping cart */
+  flex: 0 0 300px;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .shopping-cart h2 {
@@ -122,7 +121,7 @@
 }
 
 .shopping-cart li:last-child {
-  border-bottom: none; /* Remove border from the last item */
+  border-bottom: none;
 }
 
 .shopping-cart button {
