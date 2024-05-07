@@ -1,5 +1,6 @@
 const Student = require('./model');
 
+
 const saveStudent = async (req, res) => {
   try {
     const { stdnum, fname, lname, age } = req.body;
