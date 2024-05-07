@@ -1,83 +1,80 @@
-
 .header {
-    background-color: #333; /* Dark background color for the header */
-    color: #fff; /* White text color */
-    padding: 5px; /* Add some padding to the header */
-    display: flex; /* Use flexbox */
-    justify-content: space-between; 
-    align-items: center;/* Place items at the start and end of the header */
-  }
-  
-  .navigation-menu {
-    list-style-type: none; /* Remove default list style */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Display navigation items horizontally */
-  }
-  
-  .navigation-menu li {
-    margin-right: 40px; /* Add some spacing between navigation items */
-    cursor: pointer; /* Change cursor to pointer on hover */
-  }
-  
-  .navigation-menu li.active {
-    font-weight: bold; /* Bold text for active navigation item */
-  }
-  
-  .navigation-menu li:hover {
-    text-decoration: underline; /* Underline navigation item on hover */
-  }
-  
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.navigation-menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.navigation-menu li {
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.navigation-menu li.active {
+  font-weight: bold;
+}
+
+.navigation-menu li:hover {
+  text-decoration: underline;
+}
 
 .item-container {
-    display: flex; /* Use flexbox */
-    flex-wrap: wrap; /* Wrap items to the next row when needed */
-    justify-content: space-between; /* Distribute items evenly across the container */
-    padding: 20px; /* Add padding to the container */
-  }
-  
-  .item-card {
-    width: calc(33.33% - 20px); /* Set width for 3 columns with some margin */
-    margin-bottom: 30px; /* Add margin to separate items */
-    border: 1px solid #ddd; /* Border for the card */
-    border-radius: 5px; /* Rounded corners */
-    overflow: hidden; /* Hide overflowing content */
-    transition: transform 0.3s ease; /* Smooth transition on hover */
-  }
-  
-  .item-card:hover {
-    transform: translateY(-5px); /* Move card up slightly on hover */
-  }
-  
-  .item-image {
-    width: 100%; /* Ensure image fills the card width */
-    height: 200px; /* Set default height for the image */
-    object-fit: cover; /* Scale the image while maintaining aspect ratio */
-  }
-  
-  .item-details {
-    padding: 15px; /* Padding for item details */
-  }
-  
-  .item-details h3 {
-    margin: 0; /* Remove default margin */
-    font-size: 18px; /* Increase font size */
-  }
-  
-  .item-details p {
-    margin: 10px 0; /* Add margin to separate text */
-  }
-  
-  .item-details button {
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none; /* Remove button border */
-    padding: 8px 15px; /* Button padding */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    border-radius: 3px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-  }
-  
-  .item-details button:hover {
-    background-color: #0056b3; /* Button background color on hover */
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.item-card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+}
+
+.item-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item-details {
+  padding: 15px;
+}
+
+.item-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.item-details p {
+  margin: 10px 0;
+}
+
+.item-details button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.item-details button:hover {
+  background-color: #0056b3;
+}

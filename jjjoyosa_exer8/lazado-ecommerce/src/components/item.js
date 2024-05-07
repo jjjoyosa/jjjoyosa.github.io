@@ -1,7 +1,5 @@
-// src/components/ItemCard.js
-
 import React from 'react';
-import './style.css'; // Import CSS for styling
+import './style.css';
 
 const ItemCard = ({ name, imageSrc, addToCart }) => {
   return (
