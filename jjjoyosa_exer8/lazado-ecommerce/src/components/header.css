@@ -1,0 +1,29 @@
+/* src/components/Header.css */
+
+.header {
+  background-color: #333; /* Dark background color for the header */
+  color: #fff; /* White text color */
+  padding: 5px; /* Add some padding to the header */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; 
+  align-items: center;/* Place items at the start and end of the header */
+}
+
+.navigation-menu {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Display navigation items horizontally */
+}
+
+.navigation-menu li {
+  margin-right: 40px; /* Add some spacing between navigation items */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.navigation-menu li.active {
+  font-weight: bold; /* Bold text for active navigation item */
+}
+
+.navigation-menu li:hover {
+  text-decoration: underline; /* Underline navigation item on hover */
+}
